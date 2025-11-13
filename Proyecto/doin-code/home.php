@@ -48,7 +48,7 @@ $userName = $_SESSION['user_name'];
           </span>
           Tarea
         </button>
-        <?php include 'User/logout_dropdown.php'; ?>
+        <?php include 'User/nombreuser.php'; ?>
       </div>
     </div>
   </nav>
