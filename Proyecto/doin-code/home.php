@@ -62,7 +62,7 @@ $userName = $_SESSION['user_name'];
         <div class="card bg-dark-secondary shadow-sm h-100">
           <div class="card-header d-flex justify-content-between align-items-center">
             <h5 class="mb-0">Tareas pendientes</h5>
-            <button class="btn btn-sm btn-outline-light border-0" data-bs-toggle="modal" data-bs-target="#miModal" id="abrirModalHeader">+</button>
+            <!-- <button class="btn btn-sm btn-outline-light border-0" data-bs-toggle="modal" data-bs-target="#miModal" id="abrirModalHeader">+</button> -->
           </div>
           <div class="card-body"><!-- aca van las tareas pendientes --></div>
           <div class="card-footer text-end">
@@ -83,7 +83,7 @@ $userName = $_SESSION['user_name'];
         <div class="card bg-dark-secondary shadow-sm h-100">
           <div class="card-header d-flex justify-content-between align-items-center">
             <h5 class="mb-0">En curso</h5>
-            <button class="btn btn-sm btn-outline-light border-0">+</button>
+            <!-- <button class="btn btn-sm btn-outline-light border-0">+</button> -->
           </div>
           <div class="card-body"><!-- aca van las tareas en curso --></div>
           <div class="card-footer text-end">
@@ -104,7 +104,7 @@ $userName = $_SESSION['user_name'];
         <div class="card bg-dark-secondary shadow-sm h-100">
           <div class="card-header d-flex justify-content-between align-items-center">
             <h5 class="mb-0">Terminado</h5>
-            <button class="btn btn-sm btn-outline-light border-0">+</button>
+            <!-- <button class="btn btn-sm btn-outline-light border-0">+</button> -->
           </div>
           <div class="card-body"><!-- aca van las tareas terminadas --></div>
           <div class="card-footer text-end">
