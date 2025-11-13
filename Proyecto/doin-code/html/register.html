@@ -1,0 +1,83 @@
+
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doin' · Registro</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="canvas">
+    <div>
+      <h1 class="headline">Organizarte<br>nunca<br>fue<br>tan<br>fácil.</h1>
+    </div>
+
+    <div class="card" role="form" aria-label="Formulario de registro">
+      <div class="brand-badge">
+        <img src="../../../Diseño/doin' logo.svg" alt="Doin' logo">
+      </div>
+      <h2 class="title">Registrate</h2>
+      <p class="subtitle">Por favor, ingresa tus datos</p>
+
+  <form action="../User/register.php" method="post" autocomplete="on" novalidate>
+        <div class="row" style="gap:14px; margin:0 0 14px;">
+          <div style="flex:1 1 0;">
+            <label for="name">Nombre</label>
+            <input class="input" type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+          </div>
+          <div style="flex:1 1 0;">
+            <label for="lastname">Apellido</label>
+            <input class="input" type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Correo electronico</label>
+          <input class="input" type="email" id="mail" name="mail" placeholder="Ingresa tu correo electrónico" required>
+        </div>
+
+        <div class="field">
+          <label for="password">Contraseña</label>
+          <div class="input-group">
+            <input class="input" type="password" id="pass" name="pass" placeholder="Ingresa tu contraseña" required minlength="8">
+            <span id="togglePass" class="toggle-eye" aria-label="Mostrar u ocultar contraseña" title="Mostrar/Ocultar">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                <path d="M12 5c-5 0-9 4-10 7 1 3 5 7 10 7s9-4 10-7c-1-3-5-7-10-7Zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10Z"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="row">
+          <label class="check"><input type="checkbox" id="remember" name="remember" value="1"> Recuérdame</label>
+          <span></span>
+        </div>
+
+        <button type="submit" class="btn">Registrarme</button>
+
+        <p class="foot">¿Ya tienes una cuenta? <a class="link" href="../login.html">Iniciá sesión</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const input = document.getElementById('password');
+      const btn = document.getElementById('togglePass');
+      if(btn && input){
+        let visible = false;
+        const eye = '<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 5c-5 0-9 4-10 7 1 3 5 7 10 7s9-4 10-7c-1-3-5-7-10-7Zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10Z"/></svg>';
+        const eyeOff = '<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M3 3 21 21l-1.41 1.41-3.1-3.1A11.6 11.6 0 0 1 12 19c-5 0-9-4-10-7a12.7 12.7 0 0 1 5.3-5.47L1.59 4.41 3 3Zm7.09 7.09L9 9a5 5 0 0 0 6 6l-1.09-1.09A3.5 3.5 0 0 1 10.09 10.09Z"/></svg>';
+        btn.addEventListener('click', ()=>{
+          visible = !visible;
+          input.type = visible ? 'text' : 'password';
+          btn.innerHTML = visible ? eyeOff : eye;
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+body {
+  background: #111820;
+  color: #e6e6e6;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Navbar */
+.app-navbar {
+  background: #2b3a4f;
+}
+.app-navbar .nav-link,
+.app-navbar .navbar-brand,
+.app-navbar .btn,
+.app-navbar .username {
+  color: #fff;
+}
+
+/* Tarjetas del tablero */
+.bg-dark-secondary {
+  background-color: #2b2f36;
+  border: none;
+  border-radius: 10px;
+}
+
+.card-header {
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  font-weight: 600;
+}
+
+.card-footer {
+  background-color: transparent;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Botones */
+.btn-primary-brand {
+  background: #ed1c62;
+  border: none;
+  color: #fff;
+}
+.btn-primary-brand:hover {
+  filter: brightness(1.05);
+}
+
+.btn-lg-round {
+  border-radius: 12px;
+  padding: .65rem 1.1rem;
+  font-weight: 700;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: -2px;
+  margin-right: .4rem;
+}
+
+/* Etiquetas de prioridad */
+.priority-baja {
+  background: #28a745;
+  color: #fff;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+}
+
+.priority-media {
+  background: #ff9800;
+  color: #fff;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+}
+
+.priority-alta {
+  background: #e53935;
+  color: #fff;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+}
+
+/* Tablero general */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centrado del contenido */
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  box-sizing: border-box;
+}
+
+main .col-12,
+main .col-md-4,
+main .col-lg-3 {
+  flex: 1 1 300px; /* ocupa todo el espacio que pueda pero con un mínimo */
+  max-width: 100%; /* no limitar al 33% */
+}
+
+.card {
+  padding: 0;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Botones de + */
+.card-header button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 6px;
+  width: fit-content;
+  height: fit-content;
+}
+.card-header button:hover {
+  background-color: rgb(41, 67, 172);
+}
+
+/* Alinear correctamente las columnas */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100% !important;
+}
+
+/* Forzar que las columnas ocupen todo el ancho y no las pise bootstrap */
+main > .row {
+  justify-content: center !important;
+  align-items: flex-start !important;
+  gap: 1.5rem !important;
+  padding: 2rem !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  box-sizing: border-box;
+}
+
+/* columnas flexibles */
+main .row > .col-12,
+main .row > .col-md-4,
+main .row > .col-lg-3 {
+  flex: 1 1 300px !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+/* aseguro que las cards llenen bien el espacio */
+main .row > div .card {
+  width: 100% !important;
+  margin: 0 auto !important;
+}
